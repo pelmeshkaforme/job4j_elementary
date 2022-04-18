@@ -8,10 +8,10 @@ public class SqArea {
         return l * h;
     }
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         double p = 6;
         double k = 2;
         double result = SqArea.square(p, k);
         System.out.println("When p=" + p + " and k=" + k + " - square is " + result);
-     }
+    }
 }

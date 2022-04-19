@@ -9,7 +9,7 @@ public class SqArea {
     }
 
     public static void main(String[] args) {
-        double p = 6;
+        double p = 12;
         double k = 2;
         double result = SqArea.square(p, k);
         System.out.println("When p=" + p + " and k=" + k + " - square is " + result);

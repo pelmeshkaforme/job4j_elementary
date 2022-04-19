@@ -2,7 +2,11 @@ package ru.job4j;
 
 public class StudentInfo {
     public static void main(String[] args) {
-        System.out.println("Alexander Kireev");
-        System.out.println("30.08.1989");
+        int age = 18;
+        System.out.println(age);
+        float length = 78.0332F;
+        System.out.println(length);
+        boolean baby = true;
+        System.out.println(baby);
     }
 }

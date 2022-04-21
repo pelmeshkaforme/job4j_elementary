@@ -3,47 +3,35 @@ package ru.job4j.condition;
 public class LogicNot {
 
     public static boolean isEven(int num) {
-        boolean rsl = num % 2 == 0;
-        System.out.println(rsl);
-        return rsl;
+        return num % 2 == 0;
     }
 
     public static boolean isPositive(int num) {
-        boolean rsl = num > 0;
-        System.out.println(rsl);
-        return rsl;
+       return  num > 0;
     }
 
     public static boolean notEven(int num) {
-        boolean rsl = !(num % 2 == 0);
-        System.out.println(rsl);
-        return rsl;
+        return !isEven(num);
     }
 
     public static boolean notPositive(int num) {
-        boolean rsl = !(num > 0);
-        System.out.println(rsl);
-        return rsl;
+        return !isPositive(num);
     }
 
     public static boolean notEvenAndPositive(int num) {
-        boolean rsl = !(num % 2 == 0) && (num > 0);
-        System.out.println(rsl);
-        return rsl;
+        return !isEven(num) && isPositive(num);
     }
 
     public static boolean evenOrNotPositive(int num) {
-        boolean rsl = (num % 2 == 0) || !(num > 0);
-        System.out.println(rsl);
-        return rsl;
+        return isEven(num) || !isPositive(num);
     }
 
     public static void main(String[] args) {
-        LogicNot.isEven(9);
-        LogicNot.isPositive(-10);
-        LogicNot.notEven(10);
-        LogicNot.notPositive(5);
-        LogicNot.notEvenAndPositive(-6);
-        LogicNot.evenOrNotPositive(1);
+        System.out.println(LogicNot.isEven(10));
+        System.out.println(LogicNot.isPositive(10));
+        System.out.println(LogicNot.notEven(11));
+        System.out.println(LogicNot.notPositive(6));
+        System.out.println(LogicNot.notEvenAndPositive(6));
+        System.out.println(LogicNot.evenOrNotPositive(-1));
     }
 }

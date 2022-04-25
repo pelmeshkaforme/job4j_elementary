@@ -16,6 +16,6 @@ public class Mortgage {
     }
 
     public static void main(String[] args) {
-        System.out.println(year(100, 10, 0.5));
+        System.out.println(year(50, 10, 0.1));
     }
 }

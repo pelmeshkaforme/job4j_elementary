@@ -4,7 +4,7 @@ public class Fitness {
 
     public static int force(int ivan, int nicola) {
         int month = 0;
-        while (ivan < nicola) {
+        while (ivan <= nicola) {
             ivan *= 3;
             nicola *= 2;
             month = month + 1;

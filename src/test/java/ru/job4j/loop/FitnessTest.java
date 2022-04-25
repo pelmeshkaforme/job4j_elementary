@@ -39,7 +39,7 @@ public class FitnessTest {
         int ivan = 10;
         int nicola = 10;
         int rsl = Fitness.force(ivan, nicola);
-        int expected = 0;
+        int expected = 1;
         Assert.assertEquals(expected, rsl);
     }
 }

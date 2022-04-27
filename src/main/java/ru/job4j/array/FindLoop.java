@@ -17,4 +17,5 @@ public class FindLoop {
         int[] data = new int[] {1, 4, 5, 6, 8};
         System.out.println(indOf(data, 5));
     }
+
 }

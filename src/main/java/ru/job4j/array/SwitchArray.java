@@ -1,7 +1,5 @@
 package ru.job4j.array;
 
-import java.sql.SQLOutput;
-
 public class SwitchArray {
 
     public static int[] swap(int[] array, int source, int dest) {

@@ -8,22 +8,22 @@ import static org.junit.Assert.*;
 public class MortgageTest {
 
     @Test
-    public void when3YearsRequired() {
-        double amount = 100;
-        int salary = 50;
-        double percent = 0.2;
+    public void when1Year() {
+        int amount = 1000;
+        int salary = 1200;
+        double percent = 1;
         int rsl = Mortgage.year(amount, salary, percent);
-        int expected = 3;
+        int expected = 1;
         Assert.assertEquals(expected, rsl);
     }
 
     @Test
-    public void when0Years() {
-        double amount = 100;
-        int salary = 10;
-        double percent = 0.5;
+    public void when2Years() {
+        int amount = 100;
+        int salary = 120;
+        double percent = 50;
         int rsl = Mortgage.year(amount, salary, percent);
-        int expected = 0;
+        int expected = 2;
         Assert.assertEquals(expected, rsl);
     }
 }

@@ -7,9 +7,9 @@ public class Turn {
             int temp = array[i];
             array[i] = array[array.length - i - 1];
             array[array.length - i - 1] = temp;
-            }
-        return array;
         }
+        return array;
+    }
 
     public static void main(String[] args) {
         int[] data = {1, 2, 3, 4, 5, 6, 7};

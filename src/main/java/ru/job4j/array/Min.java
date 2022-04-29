@@ -4,7 +4,7 @@ public class Min {
 
     public static int findMin(int[] data) {
         int rsl = data[0];
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 1; i < data.length; i++) {
             if (data[i] < rsl) {
                 rsl = data[i];
             }

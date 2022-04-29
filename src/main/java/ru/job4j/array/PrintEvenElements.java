@@ -7,7 +7,7 @@ public class PrintEvenElements {
         int e = numbers.length - 1;
         String rsl = "Элементы массива с четными индексами начиная с последнего - " + ln;
         for (int i = 0; i <= numbers.length; i++) {
-            if (((numbers.length - 1 - i) % 2 == 0) && (numbers.length - 1 - i) != 0) {
+            if (((numbers.length - 1 - i) % 2 == 0)) {
                 rsl = rsl + numbers[numbers.length - 1 - i] + ln;
             }
         }

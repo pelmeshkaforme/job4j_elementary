@@ -3,14 +3,7 @@ package ru.job4j.array;
 public class EqLast {
 
     public static boolean check(int[] left, int[] right) {
-        boolean rsl = true;
-        for (int i = right.length - 1; i > right.length - 3; i--) {
-                if (left[i] != right[i]) {
-                    rsl = false;
-                    break;
-                }
-            }
-        return rsl;
+        return left[left.length - 1] == right[right.length - 1];
     }
 
     public static void main(String[] args) {

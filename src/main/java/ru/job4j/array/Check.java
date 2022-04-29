@@ -4,7 +4,7 @@ public class Check {
 
     public static boolean mono(boolean[] data) {
         boolean rsl = true;
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 1; i < data.length; i++) {
             if (data[i] != data[0]) {
                 rsl = false;
                 break;

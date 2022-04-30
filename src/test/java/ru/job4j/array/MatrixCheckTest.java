@@ -90,4 +90,43 @@ public class MatrixCheckTest {
         char[] expected = {'Q', 'T', '1'};
         Assert.assertArrayEquals(expected, rsl);
     }
+
+    @Test
+    public void whenWinCellPresentThenTrue() {
+        char[][] input = {
+                {'X', 'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '}
+        };
+        boolean rsl = MatrixCheck.isWin(input);
+        Assert.assertTrue(rsl);
+    }
+
+    @Test
+    public void whenWinRowPresentThenTrue() {
+        char[][] input = {
+                {' ', 'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {'X', ' ', ' ', ' ', ' '}
+        };
+        boolean rsl = MatrixCheck.isWin(input);
+        Assert.assertTrue(rsl);
+    }
+
+    @Test
+    public void whenNoWinThenFalse() {
+        char[][] input = {
+                {' ', 'X', ' ', 'X', ' '},
+                {'X', 'X', 'X', ' ', 'X'},
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {'X', ' ', ' ', 'X', ' '}
+        };
+        boolean rsl = MatrixCheck.isWin(input);
+        Assert.assertFalse(rsl);
+    }
 }

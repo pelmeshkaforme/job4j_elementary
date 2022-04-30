@@ -41,6 +41,22 @@ public class MatrixCheck {
         return rsl;
     }
 
+    public static boolean isWin(char[][] socoban) {
+        boolean rsl = false;
+        for (int i = 0; i < socoban.length; i++) {
+            for (int j = i; j <= i; j++) {
+                if (socoban[i][j] == 'X') {
+                    if ((monoHorizontal(socoban, i)) || (monoVertical(socoban, j))) {
+                        rsl = true;
+                        break;
+                    }
+                }
+            }
+
+        }
+        return rsl;
+    }
+
     public static void main(String[] args) {
         char[][] data = {
                 {'X', 'X', ' '},
@@ -49,12 +65,22 @@ public class MatrixCheck {
         };
         int row = 1;
         int cell = 0;
-        System.out.println(monoHorizontal(data, row));
-        System.out.println(monoVertical(data, cell));
+        System.out.println("Заданная строка полностью заполнена символом Х - " + monoHorizontal(data, row));
+        System.out.println("Заданный столбец полностью заполнена символом Х - " + monoHorizontal(data, cell));
         System.out.println();
+        System.out.print("Диагональ заданного массива представляет собой - ");
         char[] rsl = extractDiagonal(data);
         for (int i = 0; i < rsl.length; i++) {
-                System.out.println(rsl[i]);
+                System.out.print(rsl[i]);
         }
+        System.out.println();
+        char[][] socoban = {
+                {' ', 'X', ' ', ' ', ' '},
+                {'X', ' ', ' ', ' ', ' '},
+                {'X', 'X', ' ', ' ', ' '},
+                {'X', 'X', ' ', ' ', ' '},
+                {'X', 'X', ' ', ' ', ' '}
+        };
+        System.out.println("В заданном массиве есть выигрышная позиция - " + isWin(socoban));
     }
 }

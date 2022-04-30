@@ -30,4 +30,28 @@ public class MatrixCheckTest {
         boolean rsl = MatrixCheck.monoHorizontal(input, row);
         Assert.assertFalse(rsl);
     }
+
+    @Test
+    public void whenCellIsMonoThenTrue() {
+        char[][] input = {
+                {'X', ' ', 'X'},
+                {'X', 'X', 'X'},
+                {' ', ' ', 'X'}
+        };
+        int cell = 2;
+        boolean rsl = MatrixCheck.monoVertical(input, cell);
+        Assert.assertTrue(rsl);
+    }
+
+    @Test
+    public void whenCellIsNotMonoThenFalse() {
+        char[][] input = {
+                {'X', ' ', 'X'},
+                {'X', 'X', 'X'},
+                {' ', ' ', 'X'}
+        };
+        int cell = 0;
+        boolean rsl = MatrixCheck.monoVertical(input, cell);
+        Assert.assertFalse(rsl);
+    }
 }

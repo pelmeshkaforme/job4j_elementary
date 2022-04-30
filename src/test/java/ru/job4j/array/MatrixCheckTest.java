@@ -54,4 +54,40 @@ public class MatrixCheckTest {
         boolean rsl = MatrixCheck.monoVertical(input, cell);
         Assert.assertFalse(rsl);
     }
+
+    @Test
+    public void whenDiaFullOne() {
+        char[][] input = {
+                {'1', ' ', 'X'},
+                {'X', '1', 'X'},
+                {' ', ' ', '1'}
+        };
+        char[] rsl = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'1', '1', '1'};
+        Assert.assertArrayEquals(expected, rsl);
+    }
+
+    @Test
+    public void whenDiaFullX() {
+        char[][] input = {
+                {'X', ' ', 'X'},
+                {'X', 'X', 'X'},
+                {' ', ' ', 'X'}
+        };
+        char[] rsl = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'X', 'X', 'X'};
+        Assert.assertArrayEquals(expected, rsl);
+    }
+
+    @Test
+    public void whenDiaMix() {
+        char[][] input = {
+                {'Q', ' ', 'X'},
+                {'X', 'T', 'X'},
+                {' ', ' ', '1'}
+        };
+        char[] rsl = MatrixCheck.extractDiagonal(input);
+        char[] expected = {'Q', 'T', '1'};
+        Assert.assertArrayEquals(expected, rsl);
+    }
 }

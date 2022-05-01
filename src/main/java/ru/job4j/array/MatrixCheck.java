@@ -35,15 +35,10 @@ public class MatrixCheck {
     public static boolean isWin(char[][] socoban) {
         boolean rsl = false;
         for (int i = 0; i < socoban.length; i++) {
-            for (int j = i; j <= i; j++) {
-                if (socoban[i][j] == 'X') {
-                    if ((monoHorizontal(socoban, i)) || (monoVertical(socoban, j))) {
-                        rsl = true;
-                        break;
-                    }
-                }
+            if (socoban[i][i] == 'X' && (monoHorizontal(socoban, i) || monoVertical(socoban, i))) {
+                rsl = true;
+                break;
             }
-
         }
         return rsl;
     }
@@ -66,7 +61,7 @@ public class MatrixCheck {
         }
         System.out.println();
         char[][] socoban = {
-                {' ', 'X', ' ', ' ', ' '},
+                {'X', 'X', ' ', ' ', ' '},
                 {'X', ' ', ' ', ' ', ' '},
                 {'X', 'X', ' ', ' ', ' '},
                 {'X', 'X', ' ', ' ', ' '},

@@ -10,9 +10,9 @@ public class MatrixCheckTest {
     @Test
     public void whenRowIsMonoThenTrue() {
         char[][] input = {
-                {' ', ' '},
+                {' ', 'X', ' '},
                 {'X', 'X', 'X'},
-                {' ', ' '}
+                {' ', ' ', 'X'}
         };
         int row = 1;
         boolean rsl = MatrixCheck.monoHorizontal(input, row);
@@ -22,9 +22,9 @@ public class MatrixCheckTest {
     @Test
     public void whenRowIsNotMonoThenFalse() {
         char[][] input = {
-                {' ', ' '},
+                {' ', ' ', 'X'},
                 {'X', 'X', 'X'},
-                {' ', ' '}
+                {' ', ' ', ' '}
         };
         int row = 2;
         boolean rsl = MatrixCheck.monoHorizontal(input, row);

@@ -4,14 +4,12 @@ public class MatrixCheck {
 
     public static boolean monoHorizontal(char[][] data, int row) {
         boolean rsl = true;
-        for (int i = row; i <= row; i++) {
             for (int j = 0; j < data[row].length; j++) {
-                if (data[i][j] != 'X') {
+                if (data[row][j] != 'X') {
                     rsl = false;
                     break;
                 }
             }
-        }
         return rsl;
     }
 

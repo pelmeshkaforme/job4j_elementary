@@ -17,7 +17,7 @@ public class Merge {
     }
 
     public static void main(String[] args) {
-        int[] left = {1, 2, 4, 7, 9};
+        int[] left = {1, 20, 34, 77, 79};
         int[] right = {2, 4, 5, 6, 7};
         int[] rsl = merge(left, right);
         for (int number : rsl) {

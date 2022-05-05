@@ -69,4 +69,5 @@ public class MatrixCheck {
         };
         System.out.println("В заданном массиве есть выигрышная позиция - " + isWin(socoban));
     }
+
 }

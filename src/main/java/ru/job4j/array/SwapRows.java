@@ -21,7 +21,6 @@ public class SwapRows {
                     data[i][j] = data[i][dest];
                     data[i][dest] = temp;
                 }
-
             }
         }
         return data;

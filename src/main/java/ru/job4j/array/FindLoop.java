@@ -29,5 +29,4 @@ public class FindLoop {
         System.out.println(indOf(data, 5));
         System.out.println(searchBetween(data, 4, 3, 7));
     }
-
 }

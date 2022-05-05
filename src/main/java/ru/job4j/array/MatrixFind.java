@@ -13,7 +13,6 @@ public class MatrixFind {
                     System.out.println("Индекса искомого числа равне: row = " + row + " , cell = " + cell);
                 }
             }
-
         }
     }
 

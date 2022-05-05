@@ -15,7 +15,6 @@ public class OddPrint {
             if (array[array.length - 1 - i] % 2 == 0) {
                 System.out.println(array[array.length - 1 - i]);
             }
-
         }
     }
 

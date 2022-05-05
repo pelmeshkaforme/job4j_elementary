@@ -15,5 +15,4 @@ public class AlertDivByZero {
             System.out.println("This is negative number");
         }
     }
-
 }

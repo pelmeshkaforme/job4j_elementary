@@ -23,6 +23,5 @@ public class ProstoeOrNeprostoe {
             check(20);
             check(21);
             check(22);
-
         }
     }

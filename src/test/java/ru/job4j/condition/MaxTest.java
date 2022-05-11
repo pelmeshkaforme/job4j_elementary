@@ -8,29 +8,32 @@ import static org.junit.Assert.*;
 public class MaxTest {
 
     @Test
-    public void whenLeft25Right10ThanLeft() {
-        int left = 25;
-        int right = 10;
-        int result = Max.max(left, right);
-        int expected = 25;
+    public void when0And3And2And9Then9() {
+        int first = 0;
+        int second = 3;
+        int third = 2;
+        int fourth = 9;
+        int result = Max.max(first, second, third, fourth);
+        int expected = 9;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void whenLeft10Right25ThanLeft() {
-        int left = 1;
-        int right = 15;
-        int result = Max.max(left, right);
-        int expected = 15;
+    public void when3And8Then8() {
+        int first = 3;
+        int second = 8;
+        int result = Max.max(first, second);
+        int expected = 8;
         Assert.assertEquals(result, expected);
     }
 
     @Test
-    public void whenLeft100Right100ThanAny() {
-        int left = 100;
-        int right = 100;
-        int result = Max.max(left, right);
-        int expected = 100;
+    public void when9And20And0Then20() {
+        int first = 9;
+        int second = 20;
+        int third = 0;
+        int result = Max.max(first, second);
+        int expected = 20;
         Assert.assertEquals(result, expected);
     }
 }
